@@ -2,32 +2,15 @@ package de.neuefische.passwordvalidation;
 
 public class PasswordValidation {
 
-    public static void main(String[] args) {
-
-        String test = "A8nblas9c";
-        /*
-        passwordLengthValidation(test);
-        System.out.println(test.charAt(0));
-        System.out.println(passwordHasDigitValidation("Tutnix"));
-        passwordHasLowerCaseLetter(test);
-        passwordHasUpperCaseLetter(test);
-        */
-
-        //checkPassword(test);
-        String[] passwords = new String[]{"012345", "Passwort", "NaSowas5", "KeineAhnung"};
-        checkListOfPasswords(passwords);
-
-    }
+    private static final int MINIMUM_LENGTH = 8;
 
     private static boolean passwordLengthValidation(String password) {
 
-        int minimumLength = 8;
-
-        if (password.length() >= minimumLength) {
+        if (password.length() >= MINIMUM_LENGTH) {
             return true;
         }
         else {
-            System.out.println("The password must have a minimum length of " + minimumLength + " signs.");
+            System.out.println("The password must have a minimum length of " + MINIMUM_LENGTH + " signs.");
         }
 
         return false;
@@ -96,7 +79,7 @@ public class PasswordValidation {
     public static boolean checkListOfPasswords(String[] passwords)
     {
         for(int i = 0; i < passwords.length; i++) {
-            System.out.println("\nThe " + (i+1) + " password in the list: " );
+            System.out.println("\nThe " + (i+1) + " password in the list: ");
             checkPassword(passwords[i]);
         }
         return false;
