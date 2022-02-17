@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 class PasswordValidationTest {
 
     @Test
-    void shouldBeTrueIfPassesLengthDigitLowerUpper()
-    {
+    void shouldBeTrueIfPassesLengthDigitLowerUpper() {
+
         // given
         String testWord = "Hello1World";
 
@@ -20,8 +20,8 @@ class PasswordValidationTest {
 
 
     @Test
-    void shouldBeFalseIfNotPassesLengthDigitLowerUpper()
-    {
+    void shouldBeFalseIfNotPassesLengthDigitLowerUpper() {
+
         // given
         String testWord = "";
 
@@ -32,9 +32,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLenght()
-    {
+    void shouldBeFalseIfOnlyPassesLenght() {
+
         // given
         String testWord = "        ";
 
@@ -45,9 +46,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesUpper()
-    {
+    void shouldBeFalseIfOnlyPassesUpper() {
+
         // given
         String testWord = "FISCHE";
 
@@ -58,9 +60,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLower()
-    {
+    void shouldBeFalseIfOnlyPassesLower() {
+
         // given
         String testWord = "fische";
 
@@ -71,9 +74,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLengthDigit()
-    {
+    void shouldBeFalseIfOnlyPassesLengthDigit() {
+
         // given
         String testWord = "12345678";
 
@@ -84,9 +88,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLengthUpper()
-    {
+    void shouldBeFalseIfOnlyPassesLengthUpper() {
+
         // given
         String testWord = "NEUEFISCHE";
 
@@ -97,9 +102,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLengthLower()
-    {
+    void shouldBeFalseIfOnlyPassesLengthLower() {
+
         // given
         String testWord = "neuefische";
 
@@ -110,9 +116,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesDigitUpper()
-    {
+    void shouldBeFalseIfOnlyPassesDigitUpper() {
+
         // given
         String testWord = "F1SCHE";
 
@@ -123,9 +130,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesDigitLower()
-    {
+    void shouldBeFalseIfOnlyPassesDigitLower() {
+
         // given
         String testWord = "f1sche";
 
@@ -136,9 +144,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLowerUpper()
-    {
+    void shouldBeFalseIfOnlyPassesLowerUpper() {
+
         // given
         String testWord = "Fische";
 
@@ -149,9 +158,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLengthDigitLower()
-    {
+    void shouldBeFalseIfOnlyPassesLengthDigitLower() {
+
         // given
         String testWord = "neuef1sche";
 
@@ -162,9 +172,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesLengthLowerUpper()
-    {
+    void shouldBeFalseIfOnlyPassesLengthLowerUpper() {
+
         // given
         String testWord = "NeueFische";
 
@@ -175,9 +186,10 @@ class PasswordValidationTest {
         Assertions.assertFalse(isValid);
     }
 
+
     @Test
-    void shouldBeFalseIfOnlyPassesDigitLowerUpper()
-    {
+    void shouldBeFalseIfOnlyPassesDigitLowerUpper() {
+
         // given
         String testWord = "F1sche";
 
@@ -190,8 +202,8 @@ class PasswordValidationTest {
 
 
     @Test
-    void malsehen()
-    {
+    void shouldBeFalseBecauseOfFalseOfFirstSecondAndLastPassword() {
+
         // given
         String[] passwords = new String[]{"012345", "Passwort", "NaSowas5", "KeineAhnung"};
 

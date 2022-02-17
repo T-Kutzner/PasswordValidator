@@ -16,6 +16,7 @@ public class PasswordValidation {
         return false;
     }
 
+
     private static boolean passwordHasDigitValidation(String password) {
 
         for (int i = 0; i < password.length(); i++) {
@@ -29,8 +30,11 @@ public class PasswordValidation {
         return false;
     }
 
+
     private static boolean passwordHasLowerCaseLetter(String password) {
+
         for (int i = 0; i < password.length(); i++) {
+
             if (Character.isLowerCase(password.charAt(i))) {
                 return true;
             }
@@ -41,7 +45,9 @@ public class PasswordValidation {
     }
 
     private static boolean passwordHasUpperCaseLetter(String password) {
+
         for (int i = 0; i < password.length(); i++) {
+
             if (Character.isUpperCase(password.charAt(i))) {
                 return true;
             }
@@ -56,22 +62,26 @@ public class PasswordValidation {
     {
         boolean checkAll = true;
 
-        if(!passwordLengthValidation(password))
-        {checkAll = false;}
+        if(!passwordLengthValidation(password)) {
+            checkAll = false;
+        }
 
-        if(!passwordHasDigitValidation(password))
-        {checkAll = false;}
+        if(!passwordHasDigitValidation(password)) {
+            checkAll = false;
+        }
 
-        if(!passwordHasLowerCaseLetter(password))
-        {checkAll = false;}
+        if(!passwordHasLowerCaseLetter(password)) {
+            checkAll = false;
+        }
 
-        if(!passwordHasUpperCaseLetter(password))
-        {checkAll = false;}
+        if(!passwordHasUpperCaseLetter(password)) {
+            checkAll = false;
+        }
 
-        if(checkAll)
-        {
+        if(checkAll) {
             System.out.println("The password is fine");
         }
+
         return checkAll;
     }
 
@@ -79,6 +89,7 @@ public class PasswordValidation {
     public static boolean checkListOfPasswords(String[] passwords)
     {
         for(int i = 0; i < passwords.length; i++) {
+
             System.out.println("\nThe " + (i+1) + " password in the list: ");
             checkPassword(passwords[i]);
         }
